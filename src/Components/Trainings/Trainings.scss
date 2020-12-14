@@ -1,0 +1,155 @@
+.Trainings {
+	background: url('../../Assets/Images/Trainings/background.png') no-repeat center center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	.Trainings--Dotter {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #00000094;
+		text-transform: uppercase;
+		color: white;
+		background-image: radial-gradient(#00000080 5%, transparent 35%);
+		background-size: 6px 6px;
+		.Trainings__Title {
+			font-weight: bold;
+			text-align: center;
+			font-size: 1.5em;
+			padding: 2em 0;
+		}
+		.Trainings__Container {
+			max-width: 100%;
+			height: calc(70vh);
+			.Trainings__CarouselRoot {
+				width: 90%;
+				margin: 0 auto;
+				.slide {
+					background-color: #0098a0e0;
+					height: calc(70vh);
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0; right: 0;
+						border-top: 25px solid #3e3e41;
+						border-left: 25px solid transparent;
+						width: 0;
+					}
+					.Trainings__Item {
+						//position: absolute;
+						background-color: #ffffff2e;
+						padding: 0;
+						text-align: left;
+						//z-index: 1;
+						//top: 81%;
+						height: 100%;
+						transition: all 0.4s ease-out;
+						.Trainings__ItemHeader {
+							display: flex;
+							padding: 1em 0;
+							align-items: center;
+							margin-bottom: 1em;
+							.Trainings__Number {
+								border: 1px solid #fff;
+								border-radius: 50%;
+								margin: 0 0.5em;
+								text-align: center;
+								width: 35px;
+								height: 35px;
+								padding: 0px;
+								font-size: 1.5em;
+							}
+							.Trainings__ItemTitle {
+								font-size: 1.5em;
+								line-height: 1.1;
+							}
+							:before {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								height: 1px;
+								width: 75%;
+								margin: 0 auto;
+								border-bottom: 1px solid white;
+							}
+						}
+						.Trainings__ListArea {
+							text-transform: initial;
+							.Trainings__ListItem {
+								::before {
+									color: turquoise;
+								}
+							}
+						}
+						.Trainings__Btns {
+							margin: 1em 0;
+							button {
+								background: none;
+								outline: none;
+								margin: 1.5em;
+								border: 1px solid white;
+								border-radius: 2em;
+								padding: 0.5em 1em;
+								color: white;
+								text-transform: uppercase;
+								line-height: 1.5em;
+								display: flex;
+								text-align: center;
+								position: relative;
+								transition: all 0.3s ease-out;
+								&::after {
+									content: "";
+									vertical-align: middle;
+									display: inline-block;
+									/* you have given it display:block - which makes it fall in next line*/
+									width: 25px;
+									height: 20px;
+									margin-bottom: 2px;
+									margin-left: 4px;
+									background-size: 20px 20px;
+									border: none;
+									background: url(../../Assets/Images/GuestBook/whitearrow.png) center center;
+								}
+								&:active {
+									color: #dc0e28;
+									background-color: transparent;
+								}
+								&:hover {
+									background-color: white;
+									color: #03aeb8d9;
+									&::after {
+										background: url(../../Assets/Images/GuestBook/bluearrow.png) center center;
+									}
+								}
+							}
+						}
+					}
+					.Trainings__Item.col:hover {
+						background-color: #03aeb8d9;
+						top: 0;
+					}
+				}
+				.control-arrow {
+					display: none;
+				}
+				.control-dots {
+					display: none;
+				}
+				.carousel-status {
+					display: none;
+				}
+				.thumbs-wrapper {
+					display: none;
+				}
+			}
+			.Trainings__Wrapper {
+				padding: 0;
+				position: relative;
+				z-index: 0;
+				height: 40vh;
+				margin: 0 1px;
+			}
+		}
+	}
+}

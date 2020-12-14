@@ -1,0 +1,66 @@
+.GuestBook {
+	text-align: center;
+	.GuestBook__Title {
+		font-weight: bold;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		margin: 0 auto;
+		padding: 2em 0;
+	}
+	.GuestBook__TextRow {
+		width: 63%;
+		margin: 0 auto;
+		.GuestBook__P {
+			font-size: 1.2em;
+		}
+		.GuestBook__Author {
+			font-size: 1.2em;
+			margin: 0 auto;
+			.GuestBook__Author--Bold {
+				font-weight: bold;
+			}
+		}
+	}
+	.GuestBook__ButtonRow {
+		justify-content: center;
+		padding: 2em 0;
+		.GuestBook__Button {
+			background: none;
+			text-transform: uppercase;
+			color: #dc0e28;
+			border: 1px solid #dc0e28;
+			border-radius: 10em;
+			padding: 5px 10px;
+			margin: 0 0.5em;
+			height: 4vh;
+			outline: none;
+			position: relative;
+			transition: all 0.3s ease-out;
+			&::after {
+				content: "";
+				vertical-align: middle;
+				display: inline-block;
+				width: 25px;
+				height: 20px;
+				border: none;
+				margin-bottom: 2px;
+				margin-left: 4px;
+				background: url(../../Assets/Images/GuestBook/redarrow.png) center center;
+				background-size: 20px 20px;
+			}
+			&:active {
+				border-color: #dc0e28;
+				color: #dc0e28;
+				background-color: transparent;
+			}
+			&:hover {
+				background-color: #dc0e28;
+				color: white;
+				&::after {
+					background: url(../../Assets/Images/GuestBook/whitearrow.png) center center;
+					background-size: 20px 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.Facilities {
+	max-width: 90%;
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	.Facilities__Title {
+		font-weight: bold;
+		font-size: 2em;
+	}
+	.Facilities__Row {
+		justify-content: center;
+		padding: 1em 0;
+		.Facilities__Item {
+			width: 100%;
+			position: relative;
+			.Facilities__Text {
+				margin-top: -2.5em;
+				.Facilities__Header {
+					font-weight: bold;
+					margin: 0 0 -0.2em 0;
+					display: flex;
+					justify-content: center;
+				}
+				.Facilities__P {
+					width: 50%;
+					margin: 0 auto;
+					text-align: left;
+				}
+			}
+			.Facilities__Text--Edited {
+				margin-top: 0;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	.Facilities {
+		max-width: 50%;
+	}
+}

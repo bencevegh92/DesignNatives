@@ -1,0 +1,106 @@
+.Footer {
+	background-color: #3e3e41;
+	color: #bebebe;
+	.Footer__Row {
+		max-width: 80%;
+		margin: 0 auto;
+		padding-bottom: 2em;
+		.Footer__Title {
+			font-weight: bold;
+			color: white;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 1em 0;
+		}
+		.Footer__Item {
+			display: flex;
+			padding: 0.5em 0;
+			img {
+				width: 30px;
+				height: 30px;
+				margin-right: 1vw;
+			}
+			p {
+				margin: 0;
+				font-size: 0.75em;
+				.Footer__Span {
+					color: white;
+					text-decoration: underline;
+				}
+			}
+			.Footer__Form {
+				text-align: center;
+				.Footer__Input {
+					font-family: 'UtilityPro';
+					padding: 0.2em 0.5em;
+					width: 100%;
+					margin: 0.1vh 0;
+				}
+				.Footer__InputBtn {
+					background: none;
+					text-transform: uppercase;
+					color: #f4f4f4;
+					border: 1px solid #f4f4f4;
+					border-radius: 10em;
+					padding: 5px 10px;
+					margin: 1em 0.5em;
+					height: 4vh;
+					outline: none;
+					position: relative;
+					transition: all 0.3s ease-out;
+					&::after {
+						content: "";
+						vertical-align: middle;
+						display: inline-block;
+						/* you have given it display:block - which makes it fall in next line*/
+						width: 19px;
+						height: 16px;
+						border: none;
+						background: url(../../Assets/Images/GuestBook/whitearrow.png) center center;
+					}
+					&:active {
+						border-color: #dc0e28;
+						color: #dc0e28;
+						background-color: transparent;
+					}
+					&:hover {
+						background-color: #dc0e28;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.Footer__LicenseAre {
+		display: flex;
+		max-width: 85%;
+		margin: 0 auto;
+		font-size: 0.75em;
+		.Footer__Sub {
+			display: flex;
+			align-items: center;
+			.Footer__Span {
+				color: white;
+				text-decoration: underline;
+			}
+			img {
+				width: 50px;
+				height: 35px;
+				padding-right: 1vw;
+			}
+		}
+		p {
+			padding: 0;
+			margin: 0;
+		}
+		.Footer__Sub--Logo {
+			img {
+				width: 150px;
+				height: 30px;
+				padding-right: 0;
+				padding-left: 1vw;
+			}
+		}
+	}
+}

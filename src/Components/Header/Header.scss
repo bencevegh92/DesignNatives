@@ -1,0 +1,162 @@
+//Font Family
+@font-face {
+	font-family: 'UtilityPro';
+	src: local('UtilityPro'), url(../../Assets/Fonts/UtilityPro-Light.otf) format('truetype');
+}
+
+//Initial header image size
+$HeaderImageWidth: 25px;
+$HeaderImageHeight: 25px;
+
+.Header {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	font-size: 14px;
+	.Header__logo {
+		.Header__logoImage {
+			width: 220px;
+			height: 40px;
+		}
+	}
+	.Header__nav {
+		.Header__link {
+			text-align: center;
+			margin: 0 1em;
+		}
+		img {
+			width: $HeaderImageWidth;
+			height: $HeaderImageHeight;
+			margin-bottom: 0.5em;
+		}
+		.Header__RedLink {
+			margin: 0;
+		}
+		.Header__RedList {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-left: 2em;
+			color: #dc0e28;
+			button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: none;
+				outline: none;
+				border: 1px solid #dc0e28;
+				border-radius: 2em;
+				padding: 0.5em 0.75em;
+				color: #dc0e28;
+				text-transform: uppercase;
+				line-height: 1.5em;
+				text-align: center;
+				transition: all 0.3s ease-out;
+				&::before {
+					content: "";
+					vertical-align: middle;
+					display: inline-block;
+					/* you have given it display:block - which makes it fall in next line*/
+					width: 25px;
+					padding: 5px;
+					margin-bottom: 5px;
+					height: 25px;
+					border: none;
+					background: url(../../Assets/Images/Header/booking.png) center center;
+					background-size: 25px 25px;
+				}
+				&:active {
+					border-color: #dc0e28;
+					color: #dc0e28;
+					background-color: transparent;
+				}
+				&:hover {
+					background-color: #dc0e28;
+					color: white;
+					&::before {
+						background: url(../../Assets/Images/Header/bookingwhite.png) center center;
+						background-size: 25px 25px;
+					}
+				}
+			}
+			.Header__UserBtn {
+				::before {
+					background: url(../../Assets/Images/Header/user.png) center center;
+					background-size: 25px 25px;
+				}
+				&:hover {
+					::before {
+						background: url(../../Assets/Images/Header/userwhite.png) center center;
+						background-size: 25px 25px;
+					}
+				}
+			}
+			.Header__HuBtn {
+				::before {
+					background: url(../../Assets/Images/Header/hu.png) center center;
+					background-size: 25px 25px;
+				}
+				&:hover {
+					::before {
+						background: url(../../Assets/Images/Header/huwhite.png) center center;
+						background-size: 25px 25px;
+					}
+				}
+			}
+		}
+	}
+}
+.navbar-toggler {
+	padding: 0;
+}
+.navbar-toggler-icon {
+	width: 2em;
+	height: 2em;
+}
+.navbar-light .navbar-toggler {
+	border: none;
+}
+.navbar-light .navbar-toggler-icon {
+	background-image: url(../../Assets/Images/Header/hamburgericon.png);
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+	.Header {
+		position: relative;
+		padding: 5%;
+	}
+	.Header__logo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 1em;
+	}
+	.Header__nav {
+		position: relative;
+		width: 100%;
+		.Header__link {
+			padding: 0.1em 1em;
+		}
+		.Header__RedList {
+			padding: 1em 0;
+		}
+		.navbar-toggler {
+			position: absolute;
+			right: 0;
+			top: -1em;
+		}
+	}
+}
+
+
+@media screen and (max-width: 425px) {
+	.Header {
+		padding: 10%;
+	}
+	.navbar-collapse {
+		padding-top: 3em;
+	}
+}

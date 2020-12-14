@@ -1,0 +1,161 @@
+.News {
+	.News__Background {
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		padding: 2em;
+		.News__Title {
+			font-weight: bold;
+			text-align: center;
+			font-size: 1.5em;
+			padding-bottom: 1em;
+		}
+		.News__Column {
+			.carousel .slider-wrapper  {
+				overflow:visible;
+			}
+			.News__Col {
+				background: url(../../Assets/Images/News/news1.png);
+				background-size: 100%;
+				height: calc(35vh);
+				margin: 0 0.7em;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				z-index: 0;
+				.News__HiddenCol {
+					position: absolute;
+					z-index: 1;
+					height: 100%;
+					padding: 0;
+					width: 100%;
+					background: white;
+					top: 60%;
+					transition: all 0.5s ease;
+					.News__Wrapper {
+						padding: 0.7em 1em;
+						.News__Time {
+							display: flex;
+							width: 100%;
+							align-items: center;
+							padding-bottom: 0.5em;
+							.News__P {
+								margin: 0;
+								text-transform: initial;
+								font-weight: bold;
+								font-size: 0.8em;
+								&::before {
+									content: "";
+									vertical-align: middle;
+									display: inline-block;
+									margin-right: 0.5em;
+									width: 20px;
+									height: 20px;
+									border: none;
+									background: url(data:image/png;base64,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)
+										center center;
+									background-size: 20px 20px;
+								}
+							}
+							img {
+								width: 1.5em;
+								height: 1.5em;
+							}
+						}
+						button {
+							display: none;
+						}
+					}
+				}
+				.News__HiddenCol.col:hover {
+					background: #d80f26;
+					color: white;
+					top: 0;
+					button {
+						display: block;
+						background: none;
+						outline: none;
+						border: 1px solid white;
+						border-radius: 2em;
+						padding: 0.3em 1em;
+						color: white;
+						text-transform: uppercase;
+						line-height: 1.5em;
+						text-align: center;
+						margin-top: 6em;
+						transition: all 0.3s ease-out;
+						&::after {
+							content: "";
+							vertical-align: middle;
+							display: inline-block;
+							/* you have given it display:block - which makes it fall in next line*/
+							width: 19px;
+							height: 16px;
+							border: none;
+							background: url(../../Assets/Images/GuestBook/whitearrow.png) center center;
+						}
+						&:active {
+							border-color: #dc0e28;
+							color: #dc0e28;
+							background-color: transparent;
+						}
+						&:hover {
+							background-color: white;
+							color: #dc0e28;
+							border-color: 1px solid white;
+							&::after {
+								background: url(../../Assets/Images/GuestBook/redarrow.png) center center;
+							}
+						}
+					}
+					.News__P {
+						&::before {
+							content: "";
+							vertical-align: middle;
+							display: inline-block;
+							margin-right: 0.5em;
+							width: 20px;
+							height: 20px;
+							border: none;
+							background: url(../../Assets/Images/News/news3.png) center center;
+							background-size: 20px 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.News__Background::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url(../../Assets/Images/News/background.png) center center;
+		background-size: cover;
+		opacity: .3;
+	}
+	.Col__fix {
+		padding: 1em;
+	}
+	.react-multi-carousel-dot-list {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.react-multi-carousel-item {
+		margin: 0 0.5em;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.react-multi-carousel-track {
+		width: 100%;
+	}
+	.News__Col {
+		height: calc(25vh) !important;
+	}
+}

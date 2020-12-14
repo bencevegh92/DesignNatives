@@ -1,0 +1,22 @@
+.Partners {
+	background-color: #f0f0f0;
+	padding-bottom: 2em;
+	.Partners__Title {
+		font-weight: bold;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		margin: 0 auto;
+		padding: 2em 0;
+		text-align: center;
+	}
+	.Partners__Row {
+        width: 50%;
+		margin: 0 auto;
+		text-align: center;
+		.Partners__Item {
+			img {
+				width: 10vw;
+			}
+		}
+	}
+}
